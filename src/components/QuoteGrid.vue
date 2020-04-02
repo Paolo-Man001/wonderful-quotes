@@ -3,7 +3,7 @@
     <div class="columns is-multiline">
 
         <Quote v-for="(quote,i) in quotes" :key="i">
-          {{ quote }}
+          "{{ quote }}"
         </Quote>
     </div>
   </section>

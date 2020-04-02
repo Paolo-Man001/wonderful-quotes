@@ -2,7 +2,7 @@
   <div class="column is-one-fifth is-2-mobile">
     <div class="card is-link quote">
       <div class="card-content">
-        <p class="title has-text-white-ter">
+        <p class="subtitle has-text-white-ter">
           <!-- Single Quote's slot -->
           <slot></slot>
         </p>
@@ -24,11 +24,11 @@
   }
 
   .quote:hover {
-    background-color: #23d160
+    background-color: #1fbc56
   }
 
   .card{
     box-shadow: 0 2px 7px 1px #7f90b9;
-    border-radius: 2px;
+    border-radius: 8px 0;
   }
 </style>
