@@ -1,17 +1,27 @@
 <template>
-  <div id="app">
+  <div class="container" id="app">
+    <QuoteGrid :quotes="quotesArray"/>
   </div>
 </template>
 
 <script>
+   import QuoteGrid from "@/components/QuoteGrid";
 
    export default {
       name: 'App',
-      components: {},
+      components: {
+         QuoteGrid
+      },
       data: function () {
          return {
+            selectComponent: 'QuoteGrid',
             quotesArray: [
-                'I am a sample Quote...'
+               'I am a sample Quote...',
+               'I am a sample Quote...',
+               'I am a sample Quote...',
+               'I am a sample Quote...',
+               'I am a sample Quote...',
+               'I am a sample Quote...'
             ],
             maxQuotes: 10
          }

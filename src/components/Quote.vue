@@ -1,5 +1,14 @@
 <template>
-  
+  <div class="column is-one-fifth is-2-mobile">
+    <div class="card is-link quote">
+      <div class="card-content">
+        <p class="title has-text-white-ter">
+          <!-- Single Quote's slot -->
+          <slot></slot>
+        </p>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -9,5 +18,17 @@
 </script>
 
 <style scoped>
+  .quote {
+    cursor: pointer;
+    background-color: #3273dc;
+  }
 
+  .quote:hover {
+    background-color: #23d160
+  }
+
+  .card{
+    box-shadow: 0 2px 7px 1px #7f90b9;
+    border-radius: 2px;
+  }
 </style>
