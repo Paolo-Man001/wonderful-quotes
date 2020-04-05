@@ -1,23 +1,26 @@
 <template>
   <div class="columns">
-    <column class="column is-full">
-      <h3>Quotes Added</h3>
-      <progress class="progress is-small is-link" value="" max="10"
-                :style="{width: (quoteCount/maxQuotes) * 100 + '%'}">
-        {{ quoteCount }} / {{ maxQuotes }}
+    <div class="column is-full">
+      <h3>Quotes Added : {{ quoteCount }} / {{ maxQuotes }}</h3>
+      <progress class="progress progress-bar is-link show-value" :value="quoteCount" max="10">
+<!--        {{ quoteCount }} / {{ maxQuotes }}-->
       </progress>
-    </column>
+    </div>
   </div>
 </template>
 
 <script>
    export default {
       name: "Header",
-      props: [ 'quoteCount', 'maxQuotes' ],
-      computed: {}
+      props: [ 'quoteCount', 'maxQuotes' ]
+
    }
 </script>
 
 <style scoped>
+  .progress::-webkit-progress-value {
+    transition: width 0.5s ease;
+  }
+
 
 </style>
