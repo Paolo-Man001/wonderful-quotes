@@ -28,7 +28,7 @@
   }
 
   .card{
-    box-shadow: 0 2px 7px 1px #7f90b9;
+    box-shadow: 0 2px 3px 1px #7f90b9;
     border-radius: 8px 0;
   }
 </style>

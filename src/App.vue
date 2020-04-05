@@ -1,6 +1,6 @@
 <template>
   <div class="container" id="app">
-    <QuoteGrid :quotes="quotesArray"/>
+    <app-quote-grid :quotes="quotesArray"/>
   </div>
 </template>
 
@@ -10,16 +10,13 @@
    export default {
       name: 'App',
       components: {
-         QuoteGrid
+         appQuoteGrid: QuoteGrid,
+
       },
       data: function () {
          return {
             selectComponent: 'QuoteGrid',
             quotesArray: [
-               'I am a sample Quote...',
-               'I am a sample Quote...',
-               'I am a sample Quote...',
-               'I am a sample Quote...',
                'I am a sample Quote...',
                'I am a sample Quote...'
             ],
