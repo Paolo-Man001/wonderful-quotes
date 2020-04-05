@@ -4,6 +4,11 @@
       <app-new-quote @quoteAdded="newQuote"/>
       <hr>
       <app-quote-grid :quotes="quotesArray"/>
+      <div class="columns">
+        <div class="column ">
+          <div class="notification  has-background-warning">notification: Click on a quote to delete!</div>
+        </div>
+      </div>
     </section>
   </div>
 </template>
