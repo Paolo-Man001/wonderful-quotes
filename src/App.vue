@@ -3,7 +3,7 @@
     <section class="section">
       <app-new-quote @quoteAdded="newQuote"/>
       <hr>
-      <app-quote-grid :quotes="quotesArray"/>
+      <app-quote-grid :quotes="quotesArray" @quoteDeleted="deleteQuote"/>
       <div class="columns">
         <div class="column ">
           <div class="notification  has-background-warning">notification: Click on a quote to delete!</div>
@@ -33,6 +33,9 @@
       methods: {
          newQuote( quote ) {
             this.quotesArray.push(quote);
+         },
+         deleteQuote( index ) {
+            this.quotesArray.splice(index, 1);
          }
       }
    }
