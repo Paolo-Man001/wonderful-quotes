@@ -2,7 +2,7 @@
   <div class="column is-one-fifth is-2-mobile">
     <div class="card is-link quote">
       <div class="card-content">
-        <p class="subtitle has-text-white-ter">
+        <p class="subtitle has-text-white-ter has-text-centered">
           <!-- Single Quote's slot -->
           <slot></slot>
         </p>

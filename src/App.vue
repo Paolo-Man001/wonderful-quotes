@@ -1,26 +1,33 @@
 <template>
   <div class="container" id="app">
-    <app-quote-grid :quotes="quotesArray"/>
+    <section class="section">
+      <app-new-quote @quoteAdded="newQuote"/>
+      <hr>
+      <app-quote-grid :quotes="quotesArray"/>
+    </section>
   </div>
 </template>
 
 <script>
    import QuoteGrid from "@/components/QuoteGrid";
+   import NewQuote from "@/components/NewQuote";
 
    export default {
       name: 'App',
       components: {
          appQuoteGrid: QuoteGrid,
-
+         appNewQuote: NewQuote
       },
-      data: function () {
+      data() {
          return {
             selectComponent: 'QuoteGrid',
-            quotesArray: [
-               'I am a sample Quote...',
-               'I am a sample Quote...'
-            ],
+            quotesArray: [],
             maxQuotes: 10
+         }
+      },
+      methods: {
+         newQuote( quote ) {
+            this.quotesArray.push(quote);
          }
       }
    }
