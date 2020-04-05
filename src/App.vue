@@ -1,12 +1,13 @@
 <template>
   <div class="container" id="app">
     <section class="section">
+      <app-header/>
       <app-new-quote @quoteAdded="newQuote"/>
       <hr>
       <app-quote-grid :quotes="quotesArray" @quoteDeleted="deleteQuote"/>
       <div class="columns">
         <div class="column ">
-          <div class="notification  has-background-warning">notification: Click on a quote to delete!</div>
+          <div class="notification is-info is-light">...just click on a quote to delete!</div>
         </div>
       </div>
     </section>
@@ -16,12 +17,14 @@
 <script>
    import QuoteGrid from "@/components/QuoteGrid";
    import NewQuote from "@/components/NewQuote";
+   import Header from "@/components/Header";
 
    export default {
       name: 'App',
       components: {
          appQuoteGrid: QuoteGrid,
-         appNewQuote: NewQuote
+         appNewQuote: NewQuote,
+         appHeader: Header
       },
       data() {
          return {
