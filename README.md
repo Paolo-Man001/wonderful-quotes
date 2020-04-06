@@ -1,4 +1,4 @@
-# section-10-wonderful-quotes
+# wonderful-quotes
 
 ## Project setup
 ```
